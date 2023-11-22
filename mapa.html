@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Barrancabermeja</title>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   		crossorigin=""/>
+	<link rel="stylesheet" type="text/css" href="mapa.css"/>
+	
+</head>
+<body>
+	<center><h1>Sitios deportivos en Barrancabermeja</h1></center>
+	<center>
+		<!-- Agrega un contenedor div para la lista de selección -->
+		<div id="select-container">
+			<select name="select-location" id="select-location">
+				<option value="-1">Seleccione un lugar:</option>
+				<option value="7.07309137105379, -73.8644431485246">Estadio Daniel Villa Zapata</option>
+				<option value="7.071230105167951, -73.86609089454116">Coliseo Deportivo Luis Francisco Castellanos</option>
+				<option value="7.070546565787691,-73.86469241494183">Patinódromo Municipal</option>
+				<option value="7.071562821329532, -73.86345132435103">Piscina Olímpica</option>
+				<option value="7.071673890131004, -73.8618684374395">Cancha de Sóftbol</option>	
+			</select>
+		</div>
+	</center>
+	<!-- Mueve este div fuera del contenedor center y agrégale un estilo para la altura -->
+	<div id="map" style="height: 400px; margin: 0 auto;"></div>
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   		crossorigin=""></script>   		
+	
+	<script src="mapa.js"></script>
+<br>
+ <!-- Agrega el botón para refrescar la página -->
+ <center><button id="refreshButton">Refrescar Mapa</button></center>
+<script>
+    // Agrega el evento de clic para el botón de refrescar la página
+    document.getElementById('refreshButton').addEventListener('click', function () {
+        location.reload();
+    });
+</script>
+</body>
+</html>
